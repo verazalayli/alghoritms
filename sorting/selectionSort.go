@@ -9,7 +9,6 @@ func SelectionSort(arr []int) []int {
 			if arr[minIndex] > arr[j] {
 				minIndex = j
 				sorted = append(sorted, arr[minIndex])
-				arr = arr[:minIndex]
 			}
 		}
 		if minIndex != i {

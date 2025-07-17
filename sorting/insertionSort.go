@@ -2,11 +2,13 @@ package sorting
 
 func InsertionSort(arr []int) []int {
 	for i := 1; i < len(arr); i++ {
-		for j := i; j < len(arr); j++ {
-			if arr[i] > arr[j] {
-				arr[i], arr[j] = arr[j], arr[i]
-			}
+		key := arr[i]
+		j := i - 1
+		for j >= 0 && arr[j] > key {
+			arr[j+1] = arr[j]
+			j--
 		}
+		arr[j+1] = key
 	}
 	return arr
 }
