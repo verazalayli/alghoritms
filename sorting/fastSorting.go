@@ -1,6 +1,6 @@
 package sorting
 
-func quicksort(arr []int) []int {
+func Quicksort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
 	}
@@ -16,8 +16,8 @@ func quicksort(arr []int) []int {
 		}
 	}
 
-	sortedLeft := quicksort(left)
-	sortedRight := quicksort(right)
+	sortedLeft := Quicksort(left)
+	sortedRight := Quicksort(right)
 
 	return append(append(sortedLeft, pivot), sortedRight...)
 }
