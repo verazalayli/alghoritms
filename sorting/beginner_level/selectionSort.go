@@ -1,4 +1,4 @@
-package sorting
+package beginner_level
 
 func SelectionSort(arr []int) []int {
 	sorted := make([]int, len(arr))
