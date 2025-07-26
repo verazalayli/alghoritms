@@ -31,16 +31,13 @@ func BFS(graph Graph, start string) {
 		current := queue[0]
 		queue = queue[1:]
 
-		// Если уже посещали, пропускаем
 		if visited[current] {
 			continue
 		}
 
-		// Отмечаем текущую вершину как посещённую
 		visited[current] = true
 		fmt.Println("Visited:", current)
 
-		// Добавляем в очередь всех непосещённых соседей
 		for _, neighbor := range graph[current] {
 			if !visited[neighbor] {
 				queue = append(queue, neighbor)
